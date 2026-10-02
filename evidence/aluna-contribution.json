@@ -1,0 +1,39 @@
+{
+  "project": "Aluna IoT",
+  "projectYear": "2025",
+  "reviewDate": "2026-10-02",
+  "author": "Roxana Naranjo Estrada",
+  "role": {
+    "es": "Desarrolladora backend en un proyecto académico colaborativo",
+    "en": "Backend developer on a collaborative academic project"
+  },
+  "evidenceBasis": {
+    "es": "Revisión del código y del historial de autoría de repositorios privados. Este resumen no contiene código fuente ni resultados de pruebas de la aplicación.",
+    "en": "Source and authorship history review of private repositories. This summary contains no source code or application test results."
+  },
+  "contributions": [
+    {
+      "commit": "25abbe9f42d03bf5e5072fb508fe122b7ab1cbcb",
+      "date": "2025-12-17",
+      "es": "Contratos y endpoints de telemetría MongoDB; generación y consulta de reportes energéticos bajo demanda, con persistencia en MongoDB.",
+      "en": "MongoDB telemetry contracts and endpoints; on-demand generation and retrieval of energy reports persisted in MongoDB."
+    },
+    {
+      "commit": "830c325a639143b579af0b110dea23ad2da087ee",
+      "date": "2025-12-16",
+      "es": "Utilidades CORS compartidas y su reutilización en middleware y handlers de la API, incluidos los de SSE.",
+      "en": "Shared CORS utilities reused in middleware and API handlers, including SSE handlers."
+    }
+  ],
+  "energyEstimate": {
+    "method": "relayOnSamples * assumedIntervalMinutes / 60 * configuredPowerKw",
+    "es": "Estimación basada en muestras del relé, un intervalo supuesto y una potencia configurada. No es una medición de electricidad ni evidencia de ahorros; se genera mediante una solicitud HTTP.",
+    "en": "An estimate based on relay samples, an assumed interval and configured power. It is neither an electricity measurement nor evidence of savings; generation is triggered by an HTTP request."
+  },
+  "teamArchitecture": ["Next.js", "TypeScript", "MQTT", "SSE", "MongoDB", "PostgreSQL", "Prisma"],
+  "visual": "/images/projects/aluna-architecture.svg",
+  "scope": {
+    "es": "La arquitectura describe el proyecto del equipo. La atribución individual se limita a los aportes anteriores. No se presenta una demo activa, validación de hardware ni un despliegue de producción.",
+    "en": "The architecture describes the team's project. Individual attribution is limited to the contributions above. No active demo, hardware validation or production deployment is presented."
+  }
+}

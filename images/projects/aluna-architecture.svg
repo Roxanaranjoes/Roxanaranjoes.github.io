@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="aluna-title aluna-description">
+  <title id="aluna-title">ALUNA IoT system architecture</title>
+  <desc id="aluna-description">Architecture illustration. Sensors send data through MQTT to a Next.js API. A dashboard requests data through REST. The API also exposes a separate server-sent events endpoint; this illustration does not show a dashboard subscription. The backend connects to MongoDB for telemetry and reports, and to PostgreSQL through Prisma.</desc>
+  <defs>
+    <marker id="aluna-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 2L10 6L2 10" fill="none" stroke="#722F45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" fill="#F5F1EA"/>
+  <g fill="none" stroke="#722F45" stroke-width="1" opacity=".13" aria-hidden="true">
+    <circle cx="1048" cy="87" r="61"/>
+    <ellipse cx="1048" cy="87" rx="24" ry="61" transform="rotate(-35 1048 87)"/>
+    <path d="M978 87H1118M1048 17V157"/>
+  </g>
+  <circle cx="1091" cy="44" r="4" fill="#722F45" opacity=".4"/>
+  <text x="64" y="92" fill="#722F45" font-family="Georgia, 'Times New Roman', serif" font-size="74" letter-spacing="-2">ALUNA<tspan font-size="26" font-style="italic" letter-spacing="0" dx="19">/ IoT</tspan></text>
+  <text x="66" y="132" fill="#625C57" font-family="Arial, Helvetica, sans-serif" font-size="24">Connected sensor data</text>
+  <path d="M64 165H1136" stroke="#D8D0C7" stroke-width="1"/>
+
+  <g fill="none" stroke="#722F45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 331H299" marker-end="url(#aluna-arrow)"/>
+    <path d="M473 331H516" marker-end="url(#aluna-arrow)"/>
+    <path d="M812 331H894" marker-end="url(#aluna-arrow)"/>
+    <path d="M522 424H190V482" marker-end="url(#aluna-arrow)"/>
+    <path d="M667 443V486H550V526" marker-end="url(#aluna-arrow)"/>
+    <path d="M667 486H961V526" marker-end="url(#aluna-arrow)"/>
+  </g>
+  <circle cx="667" cy="486" r="5" fill="#722F45"/>
+  <rect x="826" y="279" width="60" height="31" rx="15.5" fill="#EADDE0"/>
+  <text x="856" y="301" fill="#722F45" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle">REST</text>
+
+  <rect x="64" y="254" width="192" height="154" rx="8" fill="#FCF9F4" stroke="#C7ABB2" stroke-width="1.3"/>
+  <g fill="none" stroke="#722F45" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+    <rect x="85" y="278" width="22" height="22" rx="4"/>
+    <path d="M96 284V294M91 289H101M113 280C121 285 121 293 113 299M120 272C135 282 135 296 120 306"/>
+  </g>
+  <text x="85" y="363" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600">Sensors</text>
+
+  <rect x="305" y="254" width="168" height="154" rx="8" fill="#FCF9F4" stroke="#C7ABB2" stroke-width="1.3"/>
+  <g fill="none" stroke="#722F45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M330 277H348V293H330ZM357 291H375V307H357ZM337 293V307H350M348 284H366V291"/>
+  </g>
+  <text x="328" y="363" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600">MQTT</text>
+
+  <rect x="530" y="227" width="290" height="224" rx="8" fill="#EADDE0"/>
+  <rect x="522" y="219" width="290" height="224" rx="8" fill="#722F45"/>
+  <text x="549" y="254" fill="#EADDE0" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2">BACKEND</text>
+  <text x="549" y="313" fill="#F5F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="48" letter-spacing="-1">Next.js</text>
+  <text x="549" y="359" fill="#F5F1EA" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="600">API</text>
+  <path d="M549 377H785" stroke="#B58696" stroke-width="1"/>
+  <text x="549" y="409" fill="#F5F1EA" font-family="Arial, Helvetica, sans-serif" font-size="22">Data access &amp; streaming</text>
+
+  <rect x="900" y="254" width="236" height="154" rx="8" fill="#FCF9F4" stroke="#C7ABB2" stroke-width="1.3"/>
+  <g fill="none" stroke="#722F45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="923" y="277" width="41" height="30" rx="3"/>
+    <path d="M923 285H964M931 300V292M941 300V289M951 300V295"/>
+  </g>
+  <text x="922" y="363" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600">Dashboard</text>
+
+  <rect x="64" y="488" width="252" height="126" rx="8" fill="#FCF9F4" stroke="#C7ABB2" stroke-width="1.3"/>
+  <text x="85" y="535" fill="#722F45" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">SSE endpoint</text>
+  <path d="M85 551H295" stroke="#D8D0C7" stroke-width="1"/>
+  <text x="85" y="583" fill="#625C57" font-family="Arial, Helvetica, sans-serif" font-size="19">Exposed event stream</text>
+
+  <rect x="388" y="532" width="326" height="151" rx="8" fill="#EADDE0" stroke="#C7ABB2" stroke-width="1.3"/>
+  <g fill="none" stroke="#722F45" stroke-width="2" aria-hidden="true">
+    <ellipse cx="423" cy="561" rx="14" ry="5"/>
+    <path d="M409 561V583C409 590 437 590 437 583V561M409 572C409 579 437 579 437 572"/>
+  </g>
+  <text x="451" y="589" fill="#722F45" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600">MongoDB</text>
+  <path d="M413 608H689" stroke="#C7ABB2" stroke-width="1"/>
+  <text x="413" y="648" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="25">Telemetry · Reports</text>
+
+  <rect x="788" y="532" width="348" height="151" rx="8" fill="#EADDE0" stroke="#C7ABB2" stroke-width="1.3"/>
+  <g fill="none" stroke="#722F45" stroke-width="2" aria-hidden="true">
+    <ellipse cx="823" cy="561" rx="14" ry="5"/>
+    <path d="M809 561V583C809 590 837 590 837 583V561M809 572C809 579 837 579 837 572"/>
+  </g>
+  <text x="850" y="589" fill="#722F45" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600">PostgreSQL</text>
+  <path d="M813 608H1111" stroke="#C7ABB2" stroke-width="1"/>
+  <text x="813" y="648" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="25">Prisma</text>
+
+  <path d="M64 720H1136" stroke="#D8D0C7" stroke-width="1"/>
+  <text x="64" y="754" fill="#722F45" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="2">BACKEND &amp; DATA</text>
+  <text x="1136" y="754" fill="#625C57" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">System architecture</text>
+</svg>
