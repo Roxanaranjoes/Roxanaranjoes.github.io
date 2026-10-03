@@ -1,0 +1,249 @@
+{
+  "project": "FlowIPS",
+  "reviewDate": "2026-10-03",
+  "author": "Roxana Naranjo Estrada",
+  "status": "public-adaptation-verified",
+  "evidenceBasis": {
+    "originalSource": "Read-only inspection of the current private frontend and backend source. Private repository contents and deployment configuration are not included in this record.",
+    "publicAdaptation": "Six selected main-journey views adapted from real FlowIPS interface components inside the portfolio, with local TypeScript transport, synthetic state, and a guided walkthrough. This is not the entire original application. Transport-related confirmation wording is adapted to describe local simulation and shared state while original dictionaries remain intact.",
+    "captures": "Three authentic interface captures from the documented 2 October 2026 gallery, using synthetic data. These are independent examples, not one continuous encounter."
+  },
+  "contribution": {
+    "type": "Personal full-stack project",
+    "scope": [
+      "Next.js and TypeScript interfaces, shared components, and original multilingual dictionaries",
+      ".NET use cases and domain rules",
+      "PostgreSQL persistence, optimistic concurrency, and transactional events/outbox",
+      "Shared application contract and original HTTP/SignalR integration",
+      "Portfolio browser adaptation and guided encounter walkthrough"
+    ]
+  },
+  "originalSystem": {
+    "applicationScope": "Three original applications. The views listed here cover the selected main journey, not every original screen or module.",
+    "applications": [
+      {
+        "name": "Patient",
+        "views": [
+          "Patient"
+        ],
+        "refresh": "HTTP polling every five seconds"
+      },
+      {
+        "name": "Clinical",
+        "views": [
+          "Clinical"
+        ],
+        "refresh": "HTTP reads and SignalR notifications"
+      },
+      {
+        "name": "Administration",
+        "views": [
+          "Panel",
+          "Kiosk",
+          "Finance",
+          "Display"
+        ],
+        "refresh": "HTTP reads and SignalR notifications; Display uses a public projection"
+      }
+    ],
+    "backend": [
+      ".NET 10",
+      "PostgreSQL",
+      "SignalR"
+    ],
+    "financialCompletion": {
+      "paymentRequired": "Approved",
+      "invoiceRequired": "Issued",
+      "receiptMustMatch": "The charge and approved payment",
+      "scope": "Simulated payments and invoices; no money transfer or tax invoicing"
+    },
+    "qr": "Opaque, HMAC-signed, short-lived token validated by the original backend",
+    "sourceInspected": true,
+    "sourceInspectionDate": "2026-10-03"
+  },
+  "publicDemo": {
+    "views": [
+      "Patient",
+      "Kiosk",
+      "Panel",
+      "Clinical",
+      "Finance",
+      "Display"
+    ],
+    "languages": [
+      "es",
+      "en"
+    ],
+    "data": "Entirely synthetic patients, professionals, appointments, rooms, charges, payments, and invoices",
+    "execution": "Local browser TypeScript state and simulated transport/session/storage",
+    "storage": {
+      "key": "flowips-offline-demo:v1",
+      "scope": "Synthetic browser-local state only",
+      "memoryFallback": "Blocked or invalid storage falls back to memory; reload restores the initial scenario",
+      "crossTabConcurrencyGuaranteed": false,
+      "serverPersistence": false
+    },
+    "qr": "Unsigned DEMO pass with no validity outside this simulation",
+    "runsOriginalBackend": false,
+    "connectsToOriginalApi": false,
+    "usesRealSignalR": false,
+    "usesRealDatabase": false,
+    "transfersMoney": false,
+    "issuesTaxInvoices": false,
+    "analyticsAdded": false,
+    "qaStatus": "All eight browser scenarios passed in the final production static export with the portable dedicated configuration. Earlier runs and test-selector corrections are retained separately."
+  },
+  "adaptationProvenance": {
+    "sourceCommit": "b50869ff69dd68bb1585237d22d4d2d336d19733",
+    "allowlist": "The source and adapted file hashes are recorded in the product provenance manifest; private configuration and full repositories are excluded.",
+    "syntheticFixture": "Emma Carter, Dr. Alex Morgan, ticket A-017, one appointment, one room, and simulated financial records",
+    "qrGenerator": "qrcode.react 4.2.0, ISC license; its included QR generator carries a separate MIT notice",
+    "interfaceLicense": "MIT",
+    "fontLicenses": "Source Sans 3 and Noto Sans Hebrew, SIL OFL 1.1",
+    "publicLicenseNotice": "/evidence/flowips-demo-licenses.txt"
+  },
+  "verification": {
+    "currentSourceInspection": "The six selected main-journey views, Patient polling, original notification architecture, and approved-payment plus issued-invoice completion rule were inspected.",
+    "historicalDomainTests": {
+      "reviewDate": "2026-10-01",
+      "passed": 121,
+      "scope": "Historical local domain test run; this count is not attributed to the current source"
+    },
+    "originalCI": {
+      "verifiedReadOnlyOn": "2026-10-03",
+      "backend": {
+        "commit": "5ae18ffb506e89cb8ef9f11eee426e7d8d3358ed",
+        "runId": "37147311533",
+        "conclusion": "success",
+        "domainPassed": 406,
+        "integrationPassed": 142,
+        "failed": 0,
+        "skipped": 0
+      },
+      "applications": {
+        "commit": "b50869ff69dd68bb1585237d22d4d2d336d19733",
+        "runId": "37149561262",
+        "conclusion": "success",
+        "checks": "Lint, typecheck and build for Patient, Clinical and Administration"
+      },
+      "integration": {
+        "commitPrefix": "e694bea",
+        "runId": "37148474056",
+        "conclusion": "success",
+        "e2ePassed": 27,
+        "visualPassed": 7,
+        "pinnedBackend": "5ae18ffb506e89cb8ef9f11eee426e7d8d3358ed",
+        "pinnedFrontendPrefix": "cff945f",
+        "frontendDifference": "Only README, documentation and captures differ from the inspected frontend HEAD; runtime code is identical"
+      },
+      "scope": "Existing private CI metadata and logs were checked against local source references. Original suites were not rerun and original services were not modified."
+    },
+    "currentBackendSuites": "Existing CI verified; not rerun during this portfolio change",
+    "localAdapterEngine": {
+      "passed": 19,
+      "scope": "Pure TypeScript browser-adapter rules, version guards, idempotency, finance, reset, and stored-record validation; not the original .NET domain"
+    },
+    "publicBrowserChecks": {
+      "environment": "Final local production static export",
+      "verifiedDistinctScenarios": 8,
+      "initialRun": {
+        "passed": 7,
+        "failed": 1,
+        "failure": "The test's unscoped alert selector matched both the Kiosk notice and the Next route announcer"
+      },
+      "targetedRecheck": {
+        "passed": 1,
+        "failed": 0,
+        "change": "Only the test error selector was scoped to the product alert",
+        "scope": "Invalid pass, cancellation, no-show, tour exit, browser back, and invalid scheduledAt recovery to Scheduled in memory"
+      },
+      "singleEightGreenRunClaimed": true,
+      "languages": [
+        "es",
+        "en"
+      ],
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "responsiveChecksTotal": 80,
+      "roleMatrixViews": 48,
+      "automatedAccessibilityAudits": 28,
+      "retainedScreenshots": 32,
+      "invoiceDownloadsWithActualSha256Verified": 2,
+      "verified": [
+        "Deferred iframe activation from the case and Home CTA",
+        "Guided check-in, call, consultation, approved payment, issued invoice, verified JSON download, and completion in both languages",
+        "Shared role state, persistence on reload, and deterministic reset",
+        "Blocked-storage memory fallback and a completed loaded encounter while offline",
+        "Invalid saved date safely falls back without a browser exception",
+        "Keyboard navigation and responsive layout across all six selected views"
+      ],
+      "network": {
+        "blockedRequests": 0,
+        "websocketAttempts": 0,
+        "hmrSockets": 0,
+        "uncaughtBrowserErrors": 0,
+        "failedRequests": 0,
+        "failedHttpResponses": 0,
+        "originalApiCallsObserved": 0
+      },
+      "scope": "Final production export exercises only the local adaptation, not original clinical or financial services. Initial run and targeted selector recheck are retained as history.",
+      "finalRun": {
+        "passed": 8,
+        "failed": 0,
+        "skipped": 0,
+        "portableCommand": "npm run test:flowips:demo"
+      },
+      "metricsScope": "Final eight-scenario run; earlier seven-plus-one results remain historical below"
+    },
+    "reviewedExportScan": {
+      "sourceTextFiles": 49,
+      "exportTextFiles": 191,
+      "findings": 0,
+      "scope": "Final allowlisted source and textual static export; potential secrets report paths/categories only. Browser network restrictions checked separately.",
+      "deferredProductBundleLoadingVerified": true
+    },
+    "portfolioRegression": {
+      "verifiedDistinctScenarios": 102,
+      "initialRunPassed": 98,
+      "initialRunFailed": 4,
+      "targetedRecheckPassed": 4,
+      "targetedRecheckFailed": 0,
+      "correction": "Existing test selectors now accept both development and GitHub Pages trailing-slash URLs; production navigation was unchanged",
+      "single102GreenRunClaimed": false,
+      "scope": "Retained general run plus targeted desktop/mobile navigation recheck in both languages"
+    },
+    "finalPresentationRecheck": {
+      "passed": true,
+      "checks": 18,
+      "homeAccessibilityAudits": 6,
+      "nestedRoleViews": 12,
+      "parentCaseWidth": 320,
+      "iframeWidth": 286,
+      "languages": [
+        "es",
+        "en"
+      ],
+      "scope": "Final Home facts at three widths and complete guided financial workflow in a 320px parent case iframe, both locales. Complements rather than repeats the full standalone role matrix.",
+      "browserErrors": 0,
+      "blockedRequests": 0,
+      "websocketAttempts": 0
+    },
+    "developmentStrictModeSmoke": {
+      "passed": true,
+      "scope": "Complete synthetic financial journey, reload and reset on the existing local Next development server; no original services called or restarted"
+    }
+  },
+  "pending": [
+    "Physical camera, PWA installation, and Hebrew review in the original system",
+    "Cross-tab coordination and original-server guarantees are outside this local browser adaptation"
+  ],
+  "limits": [
+    "A successful browser simulation does not validate the original .NET domain, PostgreSQL persistence, signed tokens, optimistic concurrency, or SignalR delivery",
+    "The gallery captures document the original design on their stated date, not the current backend runtime",
+    "No claims of clinical deployment, regulatory acceptance, business impact, or production adoption are made"
+  ]
+}
