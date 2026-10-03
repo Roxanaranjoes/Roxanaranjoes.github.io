@@ -1,0 +1,120 @@
+{
+  "project": "SectorLens",
+  "version": "0.5.0",
+  "reviewDate": "2026-10-03",
+  "caseCutoff": "2026-10-02",
+  "author": "Roxana Naranjo Estrada",
+  "sourceVisibility": "private",
+  "sourceCommits": {
+    "implementation": "f04b3a44be7c7a72683f0f9e1b7ed1ff73f7b316",
+    "documentation": "b569cf43b2746953b8dc3e227b8375de518f50c7"
+  },
+  "evidenceBasis": {
+    "es": "Revisión de código, historial de commits, documentación, CI y reportes existentes del proyecto privado, junto con una comprobación de lectura de la demo local activa. No se repitieron las suites ni se iniciaron servicios. Los commits visibles registran el nombre de Roxana; no se afirma impacto comercial o autoría exclusiva de cada línea.",
+    "en": "Source, commit history, documentation, CI, and existing report review of the private project, plus a read-only check of its active local demo. Test suites were not repeated and services were not started. Visible commits record Roxana's name; no commercial impact or exclusive authorship of every line is claimed."
+  },
+  "role": {
+    "es": "Desarrollo full-stack de un proyecto individual de análisis financiero y datos",
+    "en": "Full-stack development of an individual financial analysis and data project"
+  },
+  "implemented": [
+    {
+      "es": "ETL configurable con casos y cuentas YAML, fuentes financieras SEC EDGAR y fuentes macro BLS, Federal Reserve y BEA.",
+      "en": "Configurable ETL with YAML cases and accounts, SEC EDGAR financial sources, and BLS, Federal Reserve, and BEA macro sources."
+    },
+    {
+      "es": "Cálculos con Decimal, persistencia NUMERIC, revisiones, fechas fiscales y grafo de dependencias que conserva las fuentes de cada resultado.",
+      "en": "Decimal calculations, NUMERIC persistence, revisions, fiscal dates, and a dependency graph preserving each result's sources."
+    },
+    {
+      "es": "API FastAPI de lectura y cinco vistas Next.js: Empresa, Sector, Comparar, Crecimiento y Metodología, con inspector de origen.",
+      "en": "Read-oriented FastAPI API and five Next.js views: Company, Industry, Compare, Growth, and Methodology, with a source inspector."
+    },
+    {
+      "es": "Bootstrap offline con verificación de 257 archivos por tamaño y SHA-256, carga y reutilización coherente del snapshot.",
+      "en": "Offline bootstrap checking 257 files by size and SHA-256, loading and consistently reusing the snapshot."
+    },
+    {
+      "es": "Narrativa opcional: indicadores cotejados con PostgreSQL, plan de plantillas e IDs mediante OpenAI Responses y redacción final verificada en el servidor.",
+      "en": "Optional narrative: indicators checked against PostgreSQL, an OpenAI Responses template-and-ID plan, and verified final server rendering."
+    }
+  ],
+  "validation": {
+    "currentBrowserReview": {
+      "views": 6,
+      "interactions": 2,
+      "passed": true,
+      "es": "Las cinco vistas de escritorio y Empresa a 320 px cargaron sin errores de JavaScript, recursos fallidos ni desbordamiento. Se comprobaron gráfica, inspector de origen, Escape y retorno del foco en escritorio y móvil. Solo se realizaron lecturas locales; no se descargaron nuevas fuentes ni se llamó al proveedor IA.",
+      "en": "The five desktop views and Company at 320 px loaded without JavaScript errors, failed resources, or overflow. The chart, source inspector, Escape, and focus return were checked on desktop and mobile. Only local reads were performed; no new sources were downloaded or AI provider calls made."
+    },
+    "localPostgresReport": {
+      "tests": 41,
+      "passed": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "es": "Conteos comprobados mediante lectura del reporte XML existente de Testcontainers; no se repitió la suite en esta revisión.",
+      "en": "Counts checked by reading the existing Testcontainers XML report; this review did not repeat the suite."
+    },
+    "ci": {
+      "runId": "37152860827",
+      "sourceCommit": "f04b3a44be7c7a72683f0f9e1b7ed1ff73f7b316",
+      "jobs": 4,
+      "status": "success",
+      "pythonTestsPassed": 1049,
+      "postgresIntegrationTestsPassed": 41,
+      "browserScenariosPassed": 8,
+      "es": "Cuatro jobs remotos aprobados: Python, integración PostgreSQL, frontend y Compose/Playwright. La documentación posterior modifica solo evidencia y usa skip ci.",
+      "en": "Four passing remote jobs: Python, PostgreSQL integration, frontend, and Compose/Playwright. Later documentation changes evidence only and uses skip ci."
+    },
+    "reproducibleDemo": {
+      "es": "Los registros existentes verifican carga inicial, reutilización sin duplicar la ejecución y servicios API/frontend disponibles en producción local.",
+      "en": "Existing records verify initial loading, reuse without duplicating the run, and API/frontend availability in local production."
+    },
+    "narrativeProvider": {
+      "es": "Respuestas controladas y cotejo con PostgreSQL probados; no hubo llamadas pagadas ni validación de un modelo remoto concreto.",
+      "en": "Controlled responses and PostgreSQL verification tested; no paid calls or validation of a specific remote model."
+    }
+  },
+  "case": {
+    "target": "Intel Corporation",
+    "ticker": "INTC",
+    "configuredPeers": 7,
+    "sourceRecordings": {
+      "historicalIssuers": 208,
+      "macroSeries": 10,
+      "es": "Cantidad de capturas, no certificación de un censo histórico completo ni disponibilidad de todos los resultados.",
+      "en": "Recording counts, not certification of a complete historical census or availability of every result."
+    }
+  },
+  "limits": [
+    {
+      "es": "El censo histórico fuera de XBRL no está certificado; los agregados strict_all_filers permanecen null con motivo explícito.",
+      "en": "The historical census beyond XBRL is not certified; strict_all_filers aggregates retain null with an explicit reason."
+    },
+    {
+      "es": "Altman carece de valor de mercado histórico suficiente y CPI octubre de 2025 está ausente; los resultados afectados no se imputan.",
+      "en": "Altman lacks sufficient historical market-value inputs and October 2025 CPI is missing; affected results are not imputed."
+    },
+    {
+      "es": "La alineación calendario y la comparación sectorial conservan supuestos, cobertura y fechas originales; no establecen causalidad.",
+      "en": "Calendar alignment and industry comparisons preserve assumptions, coverage, and original dates; they do not establish causality."
+    },
+    {
+      "es": "No se presenta una demo pública, asesoría de inversión, métricas de adopción o resultados de rentabilidad. La licencia del código está pendiente.",
+      "en": "No public demo, investment advice, adoption metrics, or return outcomes are presented. The code license is pending."
+    },
+    {
+      "es": "WSTS y FRED no aportan datos al snapshot; los derechos de fuentes se revisan por separado de la licencia del código.",
+      "en": "WSTS and FRED supply no data to the snapshot; source rights are reviewed separately from the code license."
+    }
+  ],
+  "visuals": [
+    "/images/projects/sectorlens-company-2026-10-03.png",
+    "/images/projects/sectorlens-provenance-2026-10-03.png"
+  ],
+  "primaryReferences": [
+    "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+    "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm"
+  ]
+}
